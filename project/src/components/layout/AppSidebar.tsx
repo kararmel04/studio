@@ -17,7 +17,7 @@ import {
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from '@/components/ui/collapsible';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
-import { Home, Bot, Code, BookCopy, Search, ChevronDown, Folder, Tag, Book } from 'lucide-react';
+import { Home, Bot, Code, BookCopy, Search, ChevronDown, Folder, Tag, Book, Dumbbell, ClipboardList, BookOpen } from 'lucide-react';
 import type { Post } from '@/types';
 import { ScrollArea } from '../ui/scroll-area';
 import { cn } from '@/lib/utils';
@@ -109,6 +109,38 @@ export function AppSidebar({ posts }: AppSidebarProps) {
                 <Link href="/snippets">
                   <Code />
                   Snippets
+                </Link>
+              </SidebarMenuButton>
+            </SidebarMenuItem>
+            <SidebarMenuItem>
+              <SidebarMenuButton asChild isActive={pathname.startsWith('/glossary')}>
+                <Link href="/glossary">
+                  <BookOpen />
+                  Glossary
+                </Link>
+              </SidebarMenuButton>
+            </SidebarMenuItem>
+            <SidebarMenuItem>
+              <SidebarMenuButton asChild isActive={pathname.startsWith('/exercises')}>
+                <Link href="/exercises">
+                  <Dumbbell />
+                  Exercises
+                </Link>
+              </SidebarMenuButton>
+            </SidebarMenuItem>
+            <SidebarMenuItem>
+              <SidebarMenuButton asChild isActive={pathname.startsWith('/troubleshooting')}>
+                <Link href="/troubleshooting">
+                  <ClipboardList />
+                  Troubleshooting
+                </Link>
+              </SidebarMenuButton>
+            </SidebarMenuItem>
+            <SidebarMenuItem>
+              <SidebarMenuButton asChild isActive={pathname.startsWith('/cheatsheet')}>
+                <Link href="/cheatsheet">
+                  <BookCopy />
+                  Cheat Sheets
                 </Link>
               </SidebarMenuButton>
             </SidebarMenuItem>
