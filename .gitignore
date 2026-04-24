@@ -2,45 +2,57 @@
 # Dependencies
 node_modules/
 
-# Build artifacts
+# Build outputs
 dist/
 build/
-target/
+.next/
+out/
 
-# Environment
+# Environment variables
 .env
 .env.local
-*.env.*
-
-# Editors
-.vscode/
-.idea/
+.env.*
 
 # Python
 __pycache__/
 *.pyc
 *.pyo
 *.pyd
-*.py.class
+.Python
+env/
 venv/
 .venv/
+.ENV
+.ENV.*
+.python-version
+.pytest_cache/
+.mypy_cache/
+.coverage
+coverage/
 
 # Logs
 *.log
 
-# OS
+# OS generated files
 .DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
 Thumbs.db
 
-# Coverage
-coverage/
-htmlcov/
-.coverage
-
-# Temporary files
-*.tmp
+# Editor files
+.vscode/
+.idea/
 *.swp
 *.swo
+*.tmp
+
+# Testing
+coverage/
+htmlcov/
+.nyc_output/
 
 # Compressed files
 *.zip
@@ -65,49 +77,4 @@ htmlcov/
 *.tar.bz2
 *.tar.xz
 *.tar.zst
-
-# Testing
-.mypy_cache/
-.pytest_cache/
-.jest/
-.nyc_output/
-
-# Gradle
-.gradle/
-
-# Go
-*.o
-*.a
-*.so
-*.out
-
-# Java
-*.class
-*.jar
-*.war
-*.ear
-*.obj
-
-# C/C++
-*.exe
-*.dll
-*.so
-*.a
-*.obj
-*.out
-
-# Ruby
-*.gem
-.bundle/
-.ruby-version
-
-# Rust
-Cargo.lock
-target/
-
-# Julia
-julia-*/
-
-# Zig
-zig*/
 ```
